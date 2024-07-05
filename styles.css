@@ -1,0 +1,92 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 30px;
+   margin-top: 20px;
+   border: 2px solid #bf0db9;
+   box-shadow: 2px 4px #4f244d;
+}
+
+.header-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+   color: #520550;
+}
+
+.product-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.product-item {
+   width: 25%;
+   padding: 20px;
+   border: 2px solid #e972ed;
+   border-radius: 5px;
+   box-sizing: border-box;
+   position: relative;
+}
+
+.delete-checkbox {
+   position: absolute;
+   top: 10px;
+   left: -50px;
+}
+
+.button-container button {
+   padding: 10px 15px;
+   margin-right: 10px;
+   background-color: #f587f1;
+   color: aliceblue;
+}
+
+.button-container button:hover {
+   color: #520550;
+}
+
+form div {
+   margin-bottom: 10px;
+   color: #520550;
+}
+
+label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+input, select {
+   width: 40%;
+   padding: 8px;
+   box-sizing: border-box;
+   color: #520550;
+}
+
+.message {
+   margin-top: 20px;
+   color: rgb(80, 116, 206);
+}
+
+@media (max-width: 900px) {
+   .product-item {
+       flex: 1 0 30%;
+   }
+}
+
+@media (max-width: 600px) {
+   .product-item {
+       flex: 1 1 120%;
+   }
+   .delete-checkbox {
+       left: 20px;
+       top: 5px;
+   }
+}

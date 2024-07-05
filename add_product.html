@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="product_form" method="POST" action="add_product.php">
+            <div>
+                <label for="sku">SKU:</label>
+                <input type="text" id="sku" name="sku" required>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="price">Price ($):</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div>
+                <label for="productType">Type Switcher:</label>
+                <select id="productType" name="productType" onchange="updateForm()" required>
+                    <option value="">Select a type</option>
+                    <option value="DVD">DVD</option>
+                    <option value="Book">Book</option>
+                    <option value="Furniture">Furniture</option>
+                </select>
+            </div>
+            <div id="product-specific-attribute">
+                <!-- Specific attribute inputs will be dynamically inserted here -->
+            </div>
+            <div>
+                <button type="submit">Save</button>
+                <button type="button" onclick="cancel()">Cancel</button>
+            </div>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
